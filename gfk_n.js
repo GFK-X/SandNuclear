@@ -1,7 +1,3 @@
-if (!categoryMovements.GFK) {
-    categoryMovements.GFK = [];
-}
-
 elements.water_p = {
   color: "#0300ab",
   behavior: behaviors.LIQUID,
