@@ -24,11 +24,11 @@ elements.steam_p = {
     let pushY = 0;
 
     for (let dx = -1; dx <= 1; dx++) {
-      for (let dy = -1; dy <= 1; dy++) { // Fixed: Changed dx++ to dy++
+      for (let dy = -1; dy <= 1; dy++) {
         if (dx === 0 && dy === 0) continue;
 
-        let targetX = pixel.x + dx; // Fixed: Changed = to +
-        let targetY = pixel.y + dy; // Fixed: Fixed targetY name and changed dx to dy
+        let targetX = pixel.x + dx;
+        let targetY = pixel.y + dy;
 
         if (!outOfBounds(targetX, targetY) && !isEmpty(targetX, targetY)) {
           let neighbor = pixelMap[targetX][targetY];
@@ -41,14 +41,15 @@ elements.steam_p = {
     }
     
     if (pushX !== 0 || pushY !== 0) {
-      let moveX = pushX > 0 ? 1 : (pushX < 0 ? -1 : 0);
-      let moveY = pushY > 0 ? 1 : (pushY < 0 ? -1 : 0);
-      let newX = pixel.x + moveX; // Fixed: Lowercase x
-      let newY = pixel.y + moveY; // Fixed: Lowercase y
+      let heatFactor = Math.max(1, Math.min(4, Math.floor(pixel.temp / 500)));
+      let moveX = pushX > 0 ? 1 : (pushX < 0 ? -1 : 0) * heatFactor;
+      let moveY = pushY > 0 ? 1 : (pushY < 0 ? -1 : 0) * heatFactor;
+      let newX = pixel.x + moveX;
+      let newY = pixel.y + moveY;
 
-      if (isEmpty(newX, newY)) { // Fixed: Lowercase if
-        movePixel(pixel, newX, newY); // Fixed: Lowercase pixel
+      if (isEmpty(newX, newY)) {
+        movePixel(pixel, newX, newY);
       }
     }
-  } // Fixed: Removed trailing semicolon after closing brace
+  } 
 };
