@@ -5,7 +5,7 @@ elements.u_235 = {
   state: "solid",
   density: 19000,
   temp: 20,
-  conduct: 0.8
+  conduct: 0.8, 
   tick: function(pixel) {
     if (Math.random() < 0.005) {
       let directions = [[1,0], [-1,0], [0,1], [0,-1]];
@@ -17,10 +17,10 @@ elements.u_235 = {
       }
     }
   
-   if (pixelTemp < 1500) {
-     changePixel(pixel, "Corium");
-   }
-  }
+    if (pixel.temp > 1500) {
+      changePixel(pixel, "corium");
+    }
+  },
   reactions: {
     "neutron": {
       func: function(pixel1, pixel2) {
