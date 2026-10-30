@@ -17,7 +17,7 @@ elements.steam_p = {
   density: 1,
   temp: 500,
   conduct: 0.4,
-  tempLow: 400,
+  tempLow: 200,
   stateLow: "water_p",
   tick: function(pixel) {
     let pushX = 0;
