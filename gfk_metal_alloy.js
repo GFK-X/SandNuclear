@@ -47,26 +47,27 @@ elements.molten_ziraloy = {
   temp: 1950
 };
 
-elements.uns_n06690 = {
-  color: "#de8a0b",
+elements.alloy_690 = {
+  color: "#8794a8",
   behavior: behaviors.WALL,
   state: "solid",
   category: "GFK",
   density: 8785,
   tempHigh: 1850,
-  stateHigh: "molten_uns_n06690",
+  stateHigh: "molten_alloy_690",
   conduct: 0.85,
-  temp: 1950
+  temp: 1950,
+  desc: "Chromium/Nickel baised Super-Alloy used for internals inside a heat exchanger. Highly corososive wear ressistance, High tempreture resistance, High chemical tolarance."
 };
 
-elements.molten_uns_n06690 = {
-color: "#de8a0b",
+elements.molten_alloy_690 = {
+color: "#d16506",
   behavior: behaviors.LIQUID,
   state: "liquid",
   category: "GFK",
   density: 8500,
   tempLow: 1600,
-  stateLow: "uns_n06690",
+  stateLow: "alloy_690",
   conduct: 0.8,
   temp: 1950
 };
