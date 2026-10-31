@@ -30,18 +30,18 @@ elements.zircaloy = {
   category: "GFK",
   density: 6500,
   tempHigh: 1850,
-  stateHigh: "molten.zircaloy",
+  stateHigh: "molten_zircaloy",
   conduct: 0.2,
   hardness: 0.6
 };
 
-elements.molten.ziraloy = {
+elements.molten_ziraloy = {
   color: "#de8a0b",
   behavior: behaviors.LIQUID,
   state: "liquid",
   category: "GFK",
   density: 4500,
   tempLow: 1600,
-  stateLow: "ziraloy",
+  stateLow: "zircaloy",
   conduct: 0.1
 };
