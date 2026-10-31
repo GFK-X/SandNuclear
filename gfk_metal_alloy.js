@@ -43,5 +43,6 @@ elements.molten_ziraloy = {
   density: 4500,
   tempLow: 1600,
   stateLow: "zircaloy",
-  conduct: 0.1
+  conduct: 0.1,
+  temp: 1950
 };
