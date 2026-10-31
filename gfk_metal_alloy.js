@@ -21,4 +21,27 @@ elements.molten_monel_400 = {
   stateLow: "monel_400_nicklecopper_alloy",
   conduct: 0.1,
   temp: 1400
-}
+};
+
+elements.zircaloy = {
+  color: "#97ad9d",
+  behavior: behaviors.WALL,
+  state: "solid",
+  category: "GFK",
+  density: 6500,
+  tempHigh: 1850,
+  stateHigh: "molten.zircaloy",
+  conduct: 0.2,
+  hardness: 0.6
+};
+
+elements.molten.ziraloy = {
+  color: "#de8a0b",
+  behavior: behaviors.LIQUID,
+  state: "liquid",
+  category: "GFK",
+  density: 4500,
+  tempLow: 1600,
+  stateLow: "ziraloy",
+  conduct: 0.1
+};
